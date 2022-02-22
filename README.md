@@ -17,3 +17,13 @@
 - In real time senario, while running a plan there should be one or more depandancy between resource blocks. Example - Using another resource block's id.
 - To achive this, terraform allow us to use resource attribute that can be use in a resource blcok with proper interpolation.
 - Reference example - 
+```yaml
+resource "local_file" "game" {
+  filename = var.filename
+  content = "The current time ID is ${time_static.time_id.id}"
+}
+
+resource "time_static" "time_id" {
+  
+}
+```
