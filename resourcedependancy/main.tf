@@ -2,7 +2,7 @@ resource "local_file" "game" {
   filename = var.filename
   content = var.content
   depends_on = [
-      local_file.movie
+      local_file.movie,
   ]
 }
 
