@@ -27,3 +27,7 @@ resource "time_static" "time_id" {
   
 }
 ```
+**Resource Dependancy**
+- In terraform, while running some sequence of resources they may be depends on one another.
+- Depnedancy declaration can be explicite or implicite.
+- In case of explicite declaration, `depends_on` arguments need to be defined inside resource block.
